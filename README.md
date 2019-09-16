@@ -4,7 +4,7 @@
 
 > to leave feedback use issues on this repo, hit [@fefanto](https://twitter.com/fefanto) on twitter, or drop a me a [mail](mailto:fefanto@gmail.com)
 
-## The problem
+## The Problem
 
 You are writing your plugin suite (DSP test, DAW experiment or anything related to audio software) and before committing to a full time UI designer you'd like to avoid the "reinvent-the-UI-wheel" sindrome and use something free and tailored to your needs.
 
