@@ -1,0 +1,13 @@
+<svg width="256" height="256" xmlns="http://www.w3.org/2000/svg">
+    <g fill="none" fill-rule="evenodd">
+        <g transform="translate(48 144)">
+            <circle fill="#000" cx="32" cy="32" r="32"/>
+            <circle fill="#FFF" cx="32" cy="32" r="16"/>
+        </g>
+        <g transform="translate(144 48)">
+            <circle fill="#000" cx="32" cy="32" r="32"/>
+            <circle fill="#FFF" cx="32" cy="32" r="16"/>
+        </g>
+        <path fill="#000" d="M95.17 148.875L149.64 94l10.72 11.943L104.911 161z"/>
+    </g>
+</svg>
