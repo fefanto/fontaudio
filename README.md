@@ -110,4 +110,4 @@ _NOTE: not sure yet on how wide I want this package to be. E.g.: all analog "spi
 - review synth types as well: additive, subtractive, FM, granular, wavetable, phase distortion etc.
 - block diagram (opamp etc)
 - more waveforms (fading in/out)
-- more things distortion related (there's a "corrosion" plugin from sinevibes listing some funky distortion types :exponential, soft clip, hard clip, triangle clip, triangle foldback, single foldback, multi foldback, sine foldback, sine shred .. get some ideas from there.
+- more things distortion related (there's a "corrosion" plugin from sinevibes listing some funky distortion types :exponential, soft clip, hard clip, triangle clip, triangle foldback, single foldback, multi foldback, sine foldback, sine shred ... get some ideas from there.
