@@ -48,7 +48,8 @@ to represent the company, product, or service to which they refer._
 
 ## Dependencies
 
-node/yarn (node 8.10 and yarn 1.13.0 used for this 1.0 release)
+- node/yarn (node 8.10 and yarn 1.13.0 used for this 1.0 release)
+- Juce - if you want to build the juce based demo (currently working with [Juce 5.4.4](https://github.com/WeAreROLI/JUCE/releases/tag/5.4.4))
 
 ## Building the font
 
