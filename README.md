@@ -111,18 +111,18 @@ public:
 
 - All (polite) feedback is welcome. Contacts are on top of this file.
 - Pull requests with new svg icons added in ./svgs folder are welcome. Keep in mind the goal of this package is to contain all possible Audio-Software-Related icons, but these icons will need to have some minimal general interest and usability. This is where You and I may argue but I'm looking forward to clear my own mind on this with Your very welcome help.
-- Design related feedback is _very_ welcome : I am NOT a designer and I tried to give this icon set a minimal consistence being well aware that the work is _very much_ improvable. For reference I used some 256x256 svg. You can find the at _./svgs-refs_.
+- Design related feedback is _very_ welcome : I am NOT a designer and I tried to give this icon set a minimal consistence being well aware that the work is _very much_ improvable. For reference I used some 256x256 svg files I made with the goal of having a consistent "mass" while preserving the natural difference in icon shapes. You can find them at _./svgs-refs_.
 
 ## Roadmap::Tooling
 
 _Stuff I intend to go forward with goes here - help is welcome._
 
 - public yarn/npm package for web projects :
-- other wrappers? wdl-ol / llv2? ..contributions/ideas/feedback here are vey welcome.
+- other wrappers? for the web ? wdl-ol / llv2? ...contributions/ideas/feedback here are very welcome.
 
 ## Roadmap::Next Icons
 
-_Icons that are more or less agreed to be useful and are queued go here_
+_Icons that I more or less think to be useful and get queued go here_
 
 - Drum Sampler Icons : kick, hat, cymbal etc. In more than one form maybe.
 
@@ -130,7 +130,7 @@ _Icons that are more or less agreed to be useful and are queued go here_
 
 _"maybe" icons go here ... feedback welcome on icons to include and also on how to design them._
 
-_NOTE: not sure yet on how wide I want this package to be. E.g.: all analog "spice" blocks (opamps, resistors, diodes) may be considered as audio related since lots of plugins are modeling analog circuitry modeled ... But still I'm not that convinced to include them: too ambiguous and wide a topic..._
+_NOTE: not sure yet on how wide I want this package to be. E.g.: all analog "spice" blocks (opamps, resistors, diodes) may be considered as audio related since lots of plugins are modeling analog circuitry modeled ... But still I'm not that convinced to include them: too ambiguous and wide a topic, plus those are not for audio only..._
 
 - spdif/TRS
 - fade in/fade out
