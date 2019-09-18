@@ -1,4 +1,4 @@
-# Fontaudio - icon toolkit for Audio Developers
+# Fontaudio - icon toolkit for audio developers
 
 > Version 1.0 – validation stage - any (polite) feedback is welcome:
 
@@ -41,7 +41,7 @@ to represent the company, product, or service to which they refer._
 - **./build** : all the icon set standard formats (.ttf etc.)
 - **./scripts** : js scripts for (1) creating the juce module binary data and icon names and (2) cleaning up the SVG files before they are stuffed in the font.
 - **./svgs** : svg files (just fork, add your own and rebuild)
-- **./svgs-refs** : svg files reference frames: these areused to design the icons within a base shape to keep a consistent "mass". Possibly use those as references for your custom svgs.
+- **./svgs-refs** : svg files reference frames: these are used to design the icons within a base shape to keep a consistent "mass". Possibly use those as references for your custom svgs.
 - **./wrappers/juce/module** : juce module
 - **./wrappers/juce/demo** : juce demo [PIP](https://forum.juce.com/t/what-is-a-pip/26821)
 - **./screenshots** : some screenshots (got no dedicated website yet)
@@ -62,7 +62,7 @@ _if you don't have any icons to add, just use the font in /build or using its wr
 
 **NOTE**: currently developed on a mac - please leave feedback if you find trouble using this on windows/linux. Will try to make this truly cross platform.
 
-## Building the demo
+## Building the Juce demo
 
 - Drag the file _./wrappers/juce/demo/FontAudioDemo_PIP.h_ over your projucer (currently tested with juce 5.4.3 and 5.4.4)
 - save your new projucer project somewhere (projucer command is : CMD+P)
@@ -70,6 +70,42 @@ _if you don't have any icons to add, just use the font in /build or using its wr
 - open your projucer preferred exporter and launch the demo
 
 <h1><img src="https://github.com/fefanto/fontaudio/blob/master/screenshots/fad-screenshot-demo.png?raw=true" alt="FontAudio demo screenshot" width="100%"></h1>
+
+## Using the Juce module
+
+Once the Juce FontAudio module is successfully added in your project, the paradigm used comes from Juce's [SharedResourcePtr](https://docs.juce.com/master/classSharedResourcePointer.html). There's a _IconHelper_ class containing the font in binary code plus all the methods to draw the icons as Juce Images. (Thanks [Danlin](https://github.com/danlin) the class is mostly ported from your code, minus the Singleton thing).
+All you have to do is to declare a class member in every class that's gonna use the font:
+
+```
+SharedResourcePointer<fontaudio::IconHelper> sharedFontAudio;
+```
+
+Juce SharedResourcePtr will then take care of constructing it only once and refcounting its use across your project
+
+```
+// EXAMPLE I : In a LookAndFeel Class
+class FontaudioLookAndFeel : public LookAndFeel_V4
+{
+private:
+  SharedResourcePointer<fontaudio::IconHelper> sharedFontAudio;
+public:
+  Font getComboBoxFont(ComboBox &) override
+  {
+    return sharedFontAudio->getFont(defaultFontAudioSize);
+  }
+  ...
+}
+
+// EXAMPLE II : In a button paint() method using drawText
+
+  void paint(Graphics &g) override
+  {
+    fontaudio::IconName offIcon =fontaudio::RoundswitchOff;
+    fontaudio::IconName onIcon = fontaudio::RoundswitchOn;
+    g.setFont(sharedFontAudio->getFont(getHeight() * 0.8f));
+    g.drawFittedText(getToggleState() ? onIcon : offIcon, getLocalBounds(), Justification::centred, 1, 1);
+  }
+```
 
 ## Contributing
 
