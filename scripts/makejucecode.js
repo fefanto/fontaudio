@@ -70,7 +70,7 @@ while ((match = regex_icon_description.exec(css))) {
     '");' +
     os.EOL;
 
-  fs.appendFileSync(iconFilename, fileLine);
+  fs.appendFileSync(iconFilename, fileLine); // TODO: this is probaly superslow - make one big string then append once
   matchesCount++;
 }
 console.log("icons found = " + matchesCount);
@@ -102,7 +102,7 @@ fs.writeFileSync(
   os.EOL +
   "\textern const char*\tFontAudiowebfont_ttf;" +
   os.EOL +
-  `\tconst int\t\t\tFontAudiowebfont_ttfSize = ${font.length};` + // ocio length viene diversa da python!!!!
+  `\tconst int\t\t\tFontAudiowebfont_ttfSize = ${font.length};` +
     os.EOL +
     "}" +
     os.EOL +
