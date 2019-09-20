@@ -37,7 +37,7 @@ Its goal is:
 ```
 
 - fontaudio by @fefanto - https://github.com/fefanto/fontaudio
-- License -https://github.com/fefanto/fontaudio/blob/master/README.md#license
+- license : https://github.com/fefanto/fontaudio/blob/master/README.md#license
   (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
 
 ```
