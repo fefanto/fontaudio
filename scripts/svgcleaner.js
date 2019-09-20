@@ -4,7 +4,6 @@ const fs = require("fs");
 const { exec } = require("child_process");
 
 const directoryPath = "./svgs";
-
 fs.readdir(directoryPath, function(err, files) {
   if (err) {
     return console.log("Unable to scan directory: " + err);
@@ -17,7 +16,7 @@ fs.readdir(directoryPath, function(err, files) {
       console.log(`Optimizing ${file}...`);
       exec(
         // --disable=ConvertPathData,cleanupNumericValues
-        `./node_modules/svgo/bin/svgo --pretty -q ${path.join(
+        `./node_modules/svgo/bin/svgo --pretty --config \'./scripts/svgcleaner.yml\' -q ${path.join(
           directoryPath,
           file
         )}`,
