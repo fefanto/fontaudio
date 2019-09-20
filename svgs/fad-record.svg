@@ -1,6 +1,6 @@
 <svg width="256" height="256" xmlns="http://www.w3.org/2000/svg">
     <g fill="none" fill-rule="evenodd">
         <circle fill="#000" cx="128" cy="128" r="81"/>
-        <ellipse fill="#FFF" cx="128.5" cy="128" rx="48" ry="48"/>
+        <circle fill="#FFF" cx="128.5" cy="128" r="48"/>
     </g>
 </svg>

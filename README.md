@@ -26,19 +26,31 @@ Its goal is:
 
 ## License
 
-FontAudio is MIT licensed so its free and You can use it for commercial projects and open source projects.
+**Icons — [CC BY 4.0 License](https://creativecommons.org/licenses/by/4.0/)**: applies to all icons packaged as .svg and .js file types.
 
-I am not an expert on svg and icons licenses, but I guess we can start from the [Fontawesome free license](https://fontawesome.com/license/free), and go from there.
+**Fonts — [SIL OFL 1.1 License](https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL)**: applies to all icons packaged as web and desktop font files.
 
-All logos and brand references are trademarks of their respective owners.
-The use of these trademarks does not indicate endorsement of the trademark holder by FontAudio, nor vice versa. _Please do not use brand logos for any purpose except
+**Code — [MIT License](https://opensource.org/licenses/MIT)**: applies to all non-font and non-icon files.
+
+**Attribution** : Attribution is required by MIT, SIL OFL, and CC BY licenses. here's a copyright notice you can include in your product licenses file where you list stuff you've used.:
+
+```
+
+- fontaudio by @fefanto - https://github.com/fefanto/fontaudio
+- license : https://github.com/fefanto/fontaudio/blob/master/README.md#license
+  (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+
+```
+
+**NOTE** : All logos and brand references are trademarks of their respective owners.
+The use of these trademarks does not indicate endorsement of the trademark holder by fontaudio, nor vice versa. _Please do not use brand logos for any purpose except
 to represent the company, product, or service to which they refer._
 
-**NOTE** : I tried to design icons myself as much as possible and use logos that could be of interest to the audio developer. If any imagery constituting Your intellectual property or trademark cannot be included here just drop me a line.
+**NOTE** : I tried to design icons myself as much as possible and use logos that could be of interest to the audio developer. If any imagery constituting Your intellectual property or trademark cannot be included here just drop me a line (contacts on top of this file).
 
 ## Content
 
-- **./build** : all the icon set standard formats (.ttf etc.)
+- **./font** : all the icon set standard formats (.ttf etc.)
 - **./scripts** : js scripts for (1) creating the juce module binary data and icon names and (2) cleaning up the SVG files before they are stuffed in the font.
 - **./svgs** : svg files (just fork, add your own and rebuild)
 - **./svgs-refs** : svg files reference frames: these are used to design the icons within a base shape to keep a consistent "mass". Possibly use those as references for your custom svgs.
@@ -49,17 +61,19 @@ to represent the company, product, or service to which they refer._
 ## Dependencies
 
 - node/yarn (node 8.10 and yarn 1.13.0 used for this 1.0 release)
+  - [icon-font-generator](https://www.npmjs.com/package/icon-font-generator)
+  - [svgo](https://github.com/svg/svgo)
 - Juce - if you want to build the juce based demo (currently working with [Juce 5.4.4](https://github.com/WeAreROLI/JUCE/releases/tag/5.4.4))
 
 ## Building the font
 
-_if you don't have any icons to add, just use the font in /build or using its wrappers, otherwise..._
+_if you don't have any icons to add, just use the font in ./font or using its wrappers, otherwise..._
 
 - run yarn
 - design your custom svgs and add new svgs to /svgs folder
 - run _yarn build:all_ (see package.json for the internal commands)
 
-**NOTE**: the font icon generator node package I'm using does not play nice with svg translations/rotations ... all paths flattened please :)
+**NOTE**: the icon-font-generator node package I'm using does not play nice with svg translations/rotations (not that I think it should ... it's fair to have clean and lean paths before using them): _all paths flattened please!_ 😉
 
 **NOTE**: currently developed on a mac - please leave feedback if you find trouble using this on windows/linux. Will try to make this truly cross platform.
 
