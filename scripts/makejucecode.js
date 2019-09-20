@@ -11,8 +11,8 @@ const dataHeaderFilename =
 const dataSourceFilename =
   "./wrappers/juce/module/fontaudio/data/FontAudioData.cpp";
 
-const css = fs.readFileSync("./build/fontaudio.css", "utf8");
-const font = fs.readFileSync("./build/fontaudio.ttf");
+const css = fs.readFileSync("./font/fontaudio.css", "utf8");
+const font = fs.readFileSync("./font/fontaudio.ttf");
 if (css == "") throw "can't read fontaudio.css file!";
 if (font == "") throw "can't read fontaudio.ttf file!";
 

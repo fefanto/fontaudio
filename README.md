@@ -38,7 +38,7 @@ to represent the company, product, or service to which they refer._
 
 ## Content
 
-- **./build** : all the icon set standard formats (.ttf etc.)
+- **./font** : all the icon set standard formats (.ttf etc.)
 - **./scripts** : js scripts for (1) creating the juce module binary data and icon names and (2) cleaning up the SVG files before they are stuffed in the font.
 - **./svgs** : svg files (just fork, add your own and rebuild)
 - **./svgs-refs** : svg files reference frames: these are used to design the icons within a base shape to keep a consistent "mass". Possibly use those as references for your custom svgs.
@@ -53,7 +53,7 @@ to represent the company, product, or service to which they refer._
 
 ## Building the font
 
-_if you don't have any icons to add, just use the font in /build or using its wrappers, otherwise..._
+_if you don't have any icons to add, just use the font in ./font or using its wrappers, otherwise..._
 
 - run yarn
 - design your custom svgs and add new svgs to /svgs folder
