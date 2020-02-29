@@ -1,10 +1,10 @@
 @font-face {
     font-family: "fontaudio";
-    src: url("./fontaudio.eot?93c1c656f8aefe4d3b93df78c10c3892?#iefix") format("embedded-opentype"),
-url("./fontaudio.woff2?93c1c656f8aefe4d3b93df78c10c3892") format("woff2"),
-url("./fontaudio.woff?93c1c656f8aefe4d3b93df78c10c3892") format("woff"),
-url("./fontaudio.ttf?93c1c656f8aefe4d3b93df78c10c3892") format("truetype"),
-url("./fontaudio.svg?93c1c656f8aefe4d3b93df78c10c3892#fontaudio") format("svg");
+    src: url("./fontaudio.eot?74277d70967bf0f67d1f1803decfdaa6?#iefix") format("embedded-opentype"),
+url("./fontaudio.woff2?74277d70967bf0f67d1f1803decfdaa6") format("woff2"),
+url("./fontaudio.woff?74277d70967bf0f67d1f1803decfdaa6") format("woff"),
+url("./fontaudio.ttf?74277d70967bf0f67d1f1803decfdaa6") format("truetype"),
+url("./fontaudio.svg?74277d70967bf0f67d1f1803decfdaa6#fontaudio") format("svg");
 }
 
 i[class^="icon-"]:before, i[class*=" icon-"]:before {
