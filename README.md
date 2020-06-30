@@ -1,6 +1,7 @@
 # Fontaudio - icon toolkit for audio developers
 
 > [202006] Version 1.1 - fixed icons appearance on windows (and hopefully linux).
+
 > [201907] Version 1.0
 
 > to leave feedback use issues on this repo, hit [@fefanto](https://twitter.com/fefanto) on twitter, or drop a me a [mail](mailto:fefanto@gmail.com)
