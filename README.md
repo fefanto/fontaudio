@@ -1,6 +1,7 @@
 # Fontaudio - icon toolkit for audio developers
 
-> Version 1.0 – validation stage - any (polite) feedback is welcome:
+> [202006] Version 1.1 - fixed icons appearance on windows (and hopefully linux).
+> [201907] Version 1.0
 
 > to leave feedback use issues on this repo, hit [@fefanto](https://twitter.com/fefanto) on twitter, or drop a me a [mail](mailto:fefanto@gmail.com)
 
@@ -124,8 +125,8 @@ public:
 
 ## Contributing
 
-- All (polite) feedback is welcome. Contacts are on top of this file.
-- Pull requests with new svg icons added in ./svgs folder are welcome. Keep in mind the goal of this package is to contain all possible Audio-Software-Related icons, but these icons will need to have some minimal general interest and usability. This is where You and I may argue but I'm looking forward to clear my own mind on this with Your very welcome help.
+- All feedback is welcome. Contacts are on top of this file.
+- Pull requests with new svg icons added in ./svgs folder are welcome. Keep in mind the goal of this package is to contain all possible Audio-Software-Related icons, but these icons will need to have some minimal general interest and usability. This is where You and I may argue but I'm looking forward to clear my own mind on this with Your very welcome help. See below for types of icons i plan to include in the future and if you want to contribute please do.
 - Design related feedback is _very_ welcome : I am NOT a designer and I tried to give this icon set a minimal consistence being well aware that the work is _very much_ improvable. For reference I used some 256x256 svg files I made with the goal of having a consistent "mass" while preserving the natural difference in icon shapes. You can find them at _./svgs-refs_.
 
 ## Roadmap::Tooling
@@ -133,13 +134,14 @@ public:
 _Stuff I intend to go forward with goes here - help is welcome._
 
 - public yarn/npm package for web projects :
-- other wrappers? for the web ? wdl-ol / llv2? ...contributions/ideas/feedback here are very welcome.
+- other wrappers? for the web ? wdl-ol / llv2? fontaudio is also on iPlug2 see [here](https://www.patreon.com/posts/30368442).
 
 ## Roadmap::Next Icons
 
 _Icons that I more or less think to be useful and get queued go here_
 
 - Drum Sampler Icons : kick, hat, cymbal etc. In more than one form maybe.
+- Notation Software Icons : all music notation icons that maybe useful to someone making a music scoring software. 
 
 ## Roadmap::Random Icon Ideas
 
