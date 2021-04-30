@@ -4,7 +4,7 @@
     "svgo": "1.3.0"
   },
   "scripts": {
-    "build:svgclean": "node scripts/svgcleaner.js",
+    "build:svgclean": "node scripts/svgcleaner.js $1",
     "build:font": "./node_modules/icon-font-generator/bin/icon-font-generator svgs/*.svg -o font -n fontaudio",
     "build:jucedata": "node scripts/makejucecode.js",
     "build:all": "yarn build:svgclean && yarn build:font && yarn build:jucedata && open ./font/fontaudio.html"
