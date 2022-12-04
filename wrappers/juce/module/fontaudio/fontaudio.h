@@ -43,7 +43,6 @@
 
 #include "juce_core/juce_core.h"
 #include "juce_graphics/juce_graphics.h"
-using namespace juce;
 
 #include "data/FontAudioData.h"
 #include "data/Icons.h"
