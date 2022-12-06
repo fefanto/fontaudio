@@ -30,7 +30,7 @@
 #endif
 
 //==============================================================================
-struct FontAudioDemo : public Component
+struct FontAudioDemo : public juce::Component
 {
   FontAudioDemo()
   {
@@ -106,134 +106,134 @@ struct FontAudioDemo : public Component
     linearSlidersDemo.addControl(new LinearSlider(fontaudio::Sliderhandle1, Colours::lightblue));
     linearSlidersDemo.addControl(new LinearSlider(fontaudio::Sliderhandle2, Colours::lightblue));
 
-    logosDemo.addControl(new FontaudioHyperlinkButton(fontaudio::LogoJuce, URL{"https://www.juce.com"}));
-    logosDemo.addControl(new FontaudioHyperlinkButton(fontaudio::LogoAu, URL{"https://en.wikipedia.org/wiki/Audio_Units"}));
-    logosDemo.addControl(new FontaudioHyperlinkButton(fontaudio::LogoFl, URL{"https://www.image-line.com/flstudio"}));
-    logosDemo.addControl(new FontaudioHyperlinkButton(fontaudio::LogoAax, URL{"http://apps.avid.com/aax-portal/"}));
-    logosDemo.addControl(new FontaudioHyperlinkButton(fontaudio::LogoLv2, URL{"http://lv2plug.in/"}));
-    logosDemo.addControl(new FontaudioHyperlinkButton(fontaudio::LogoVst, URL{"https://www.steinberg.net/en/company/technologies/vst3.html"}));
-    logosDemo.addControl(new FontaudioHyperlinkButton(fontaudio::LogoLive, URL{"https://www.ableton.com"}));
-    logosDemo.addControl(new FontaudioHyperlinkButton(fontaudio::LogoCubase, URL{"https://new.steinberg.net"}));
-    logosDemo.addControl(new FontaudioHyperlinkButton(fontaudio::LogoLadspa, URL{"https://www.ladspa.org/"}));
-    logosDemo.addControl(new FontaudioHyperlinkButton(fontaudio::LogoReaper, URL{"https://www.reaper.fm/"}));
-    logosDemo.addControl(new FontaudioHyperlinkButton(fontaudio::LogoReason, URL{"https://www.propellerheads.com/en/reason"}));
-    logosDemo.addControl(new FontaudioHyperlinkButton(fontaudio::LogoRewire, URL{"https://www.propellerheads.com/developer/index.cfm?fuseaction=get_article&article=rewiretechinfo"}));
-    logosDemo.addControl(new FontaudioHyperlinkButton(fontaudio::LogoRackext, URL{"https://www.propellerheads.com/developers"}));
-    logosDemo.addControl(new FontaudioHyperlinkButton(fontaudio::LogoAudacity, URL{"https://www.audacityteam.org/"}));
-    logosDemo.addControl(new FontaudioHyperlinkButton(fontaudio::LogoAudiobus, URL{"https://audiob.us/"}));
-    logosDemo.addControl(new FontaudioHyperlinkButton(fontaudio::LogoProtools, URL{"https://www.avid.com/pro-tools"}));
-    logosDemo.addControl(new FontaudioHyperlinkButton(fontaudio::LogoWaveform, URL{"https://www.tracktion.com/products/waveform"}));
-    logosDemo.addControl(new FontaudioHyperlinkButton(fontaudio::LogoStudioone, URL{"https://www.presonus.com/products/Studio-One"}));
-    logosDemo.addControl(new FontaudioHyperlinkButton(fontaudio::LogoTracktion, URL{"https://www.tracktion.com/products/t7-daw"}));
-    logosDemo.addControl(new FontaudioHyperlinkButton(fontaudio::LogoAbletonlink, URL{"https://www.ableton.com/en/link/"}));
+    logosDemo.addControl(new FontaudioHyperlinkButton(fontaudio::LogoJuce, {"https://www.juce.com"}));
+    logosDemo.addControl(new FontaudioHyperlinkButton(fontaudio::LogoAu, {"https://en.wikipedia.org/wiki/Audio_Units"}));
+    logosDemo.addControl(new FontaudioHyperlinkButton(fontaudio::LogoFl, {"https://www.image-line.com/flstudio"}));
+    logosDemo.addControl(new FontaudioHyperlinkButton(fontaudio::LogoAax, {"http://apps.avid.com/aax-portal/"}));
+    logosDemo.addControl(new FontaudioHyperlinkButton(fontaudio::LogoLv2, {"http://lv2plug.in/"}));
+    logosDemo.addControl(new FontaudioHyperlinkButton(fontaudio::LogoVst, {"https://www.steinberg.net/en/company/technologies/vst3.html"}));
+    logosDemo.addControl(new FontaudioHyperlinkButton(fontaudio::LogoLive, {"https://www.ableton.com"}));
+    logosDemo.addControl(new FontaudioHyperlinkButton(fontaudio::LogoCubase, {"https://new.steinberg.net"}));
+    logosDemo.addControl(new FontaudioHyperlinkButton(fontaudio::LogoLadspa, {"https://www.ladspa.org/"}));
+    logosDemo.addControl(new FontaudioHyperlinkButton(fontaudio::LogoReaper, {"https://www.reaper.fm/"}));
+    logosDemo.addControl(new FontaudioHyperlinkButton(fontaudio::LogoReason, {"https://www.propellerheads.com/en/reason"}));
+    logosDemo.addControl(new FontaudioHyperlinkButton(fontaudio::LogoRewire, {"https://www.propellerheads.com/developer/index.cfm?fuseaction=get_article&article=rewiretechinfo"}));
+    logosDemo.addControl(new FontaudioHyperlinkButton(fontaudio::LogoRackext, {"https://www.propellerheads.com/developers"}));
+    logosDemo.addControl(new FontaudioHyperlinkButton(fontaudio::LogoAudacity, {"https://www.audacityteam.org/"}));
+    logosDemo.addControl(new FontaudioHyperlinkButton(fontaudio::LogoAudiobus, {"https://audiob.us/"}));
+    logosDemo.addControl(new FontaudioHyperlinkButton(fontaudio::LogoProtools, {"https://www.avid.com/pro-tools"}));
+    logosDemo.addControl(new FontaudioHyperlinkButton(fontaudio::LogoWaveform, {"https://www.tracktion.com/products/waveform"}));
+    logosDemo.addControl(new FontaudioHyperlinkButton(fontaudio::LogoStudioone, {"https://www.presonus.com/products/Studio-One"}));
+    logosDemo.addControl(new FontaudioHyperlinkButton(fontaudio::LogoTracktion, {"https://www.tracktion.com/products/t7-daw"}));
+    logosDemo.addControl(new FontaudioHyperlinkButton(fontaudio::LogoAbletonlink, {"https://www.ableton.com/en/link/"}));
 
     clockPanel = new DigitalClockDemoPanel();
 
-    PushButton *playButton = new PushButton(fontaudio::Play, Colours::lightcoral, defaultDisabledColour);
+    auto *playButton = new juce::PushButton(fontaudio::Play, Colours::lightcoral, defaultDisabledColour);
     playButton->onClick = [this] { clockPanel->play(); };
-    PushButton *pauseButton = new PushButton(fontaudio::Pause, Colours::lightcoral, defaultDisabledColour);
+    auto *pauseButton = new juce::PushButton(fontaudio::Pause, Colours::lightcoral, defaultDisabledColour);
     pauseButton->onClick = [this] { clockPanel->pause(); };
-    PushButton *stopButton = new PushButton(fontaudio::Stop, Colours::lightcoral, defaultDisabledColour);
+    auto *stopButton = new juce::PushButton(fontaudio::Stop, Colours::lightcoral, defaultDisabledColour);
     stopButton->onClick = [this] { clockPanel->stop(); };
 
-    mediaPlayerDemo.addControl(new PushButton(fontaudio::Backward, Colours::lightblue, defaultDisabledColour));
-    mediaPlayerDemo.addControl(new PushButton(fontaudio::Rew, Colours::lightblue, defaultDisabledColour));
-    mediaPlayerDemo.addControl(new PushButton(fontaudio::Prev, Colours::lightblue, defaultDisabledColour));
+    mediaPlayerDemo.addControl(new juce::PushButton(fontaudio::Backward, Colours::lightblue, defaultDisabledColour));
+    mediaPlayerDemo.addControl(new juce::PushButton(fontaudio::Rew, Colours::lightblue, defaultDisabledColour));
+    mediaPlayerDemo.addControl(new juce::PushButton(fontaudio::Prev, Colours::lightblue, defaultDisabledColour));
     mediaPlayerDemo.addControl(playButton);
     mediaPlayerDemo.addControl(pauseButton);
     mediaPlayerDemo.addControl(stopButton);
-    mediaPlayerDemo.addControl(new PushButton(fontaudio::Next, Colours::lightblue, defaultDisabledColour));
-    mediaPlayerDemo.addControl(new PushButton(fontaudio::Ffwd, Colours::lightblue, defaultDisabledColour));
-    mediaPlayerDemo.addControl(new PushButton(fontaudio::Forward, Colours::lightblue, defaultDisabledColour));
-    mediaPlayerDemo.addControl(new PushButton(fontaudio::Repeat, Colours::lightblue, defaultDisabledColour));
-    mediaPlayerDemo.addControl(new PushButton(fontaudio::RepeatOne, Colours::lightblue, defaultDisabledColour));
-    mediaPlayerDemo.addControl(new PushButton(fontaudio::Shuffle, Colours::lightblue, defaultDisabledColour));
+    mediaPlayerDemo.addControl(new juce::PushButton(fontaudio::Next, Colours::lightblue, defaultDisabledColour));
+    mediaPlayerDemo.addControl(new juce::PushButton(fontaudio::Ffwd, Colours::lightblue, defaultDisabledColour));
+    mediaPlayerDemo.addControl(new juce::PushButton(fontaudio::Forward, Colours::lightblue, defaultDisabledColour));
+    mediaPlayerDemo.addControl(new juce::PushButton(fontaudio::Repeat, Colours::lightblue, defaultDisabledColour));
+    mediaPlayerDemo.addControl(new juce::PushButton(fontaudio::RepeatOne, Colours::lightblue, defaultDisabledColour));
+    mediaPlayerDemo.addControl(new juce::PushButton(fontaudio::Shuffle, Colours::lightblue, defaultDisabledColour));
 
-    genericToolbarDemo.addControl(new PushButton(fontaudio::Open, Colours::lightblue, defaultDisabledColour));
-    genericToolbarDemo.addControl(new PushButton(fontaudio::Close, Colours::lightblue, defaultDisabledColour));
-    genericToolbarDemo.addControl(new PushButton(fontaudio::Save, Colours::lightblue, defaultDisabledColour));
-    genericToolbarDemo.addControl(new PushButton(fontaudio::Saveas, Colours::lightblue, defaultDisabledColour));
-    genericToolbarDemo.addControl(new PushButton(fontaudio::Copy, Colours::lightblue, defaultDisabledColour));
-    genericToolbarDemo.addControl(new PushButton(fontaudio::Paste, Colours::lightblue, defaultDisabledColour));
-    genericToolbarDemo.addControl(new PushButton(fontaudio::Undo, Colours::lightblue, defaultDisabledColour));
-    genericToolbarDemo.addControl(new PushButton(fontaudio::Redo, Colours::lightblue, defaultDisabledColour));
-    genericToolbarDemo.addControl(new PushButton(fontaudio::HExpand, Colours::lightblue, defaultDisabledColour));
-    genericToolbarDemo.addControl(new PushButton(fontaudio::VExpand, Colours::lightblue, defaultDisabledColour));
-    genericToolbarDemo.addControl(new PushButton(fontaudio::Unlock, Colours::lightblue, defaultDisabledColour));
-    genericToolbarDemo.addControl(new PushButton(fontaudio::Lock, Colours::lightblue, defaultDisabledColour));
+    genericToolbarDemo.addControl(new juce::PushButton(fontaudio::Open, Colours::lightblue, defaultDisabledColour));
+    genericToolbarDemo.addControl(new juce::PushButton(fontaudio::Close, Colours::lightblue, defaultDisabledColour));
+    genericToolbarDemo.addControl(new juce::PushButton(fontaudio::Save, Colours::lightblue, defaultDisabledColour));
+    genericToolbarDemo.addControl(new juce::PushButton(fontaudio::Saveas, Colours::lightblue, defaultDisabledColour));
+    genericToolbarDemo.addControl(new juce::PushButton(fontaudio::Copy, Colours::lightblue, defaultDisabledColour));
+    genericToolbarDemo.addControl(new juce::PushButton(fontaudio::Paste, Colours::lightblue, defaultDisabledColour));
+    genericToolbarDemo.addControl(new juce::PushButton(fontaudio::Undo, Colours::lightblue, defaultDisabledColour));
+    genericToolbarDemo.addControl(new juce::PushButton(fontaudio::Redo, Colours::lightblue, defaultDisabledColour));
+    genericToolbarDemo.addControl(new juce::PushButton(fontaudio::HExpand, Colours::lightblue, defaultDisabledColour));
+    genericToolbarDemo.addControl(new juce::PushButton(fontaudio::VExpand, Colours::lightblue, defaultDisabledColour));
+    genericToolbarDemo.addControl(new juce::PushButton(fontaudio::Unlock, Colours::lightblue, defaultDisabledColour));
+    genericToolbarDemo.addControl(new juce::PushButton(fontaudio::Lock, Colours::lightblue, defaultDisabledColour));
 
-    dawToolbarDemo.addControl(new PushButton(fontaudio::Automation2p, Colours::lightblue, defaultDisabledColour));
-    dawToolbarDemo.addControl(new PushButton(fontaudio::Automation3p, Colours::lightblue, defaultDisabledColour));
-    dawToolbarDemo.addControl(new PushButton(fontaudio::Automation4p, Colours::lightblue, defaultDisabledColour));
-    dawToolbarDemo.addControl(new PushButton(fontaudio::Cpu, Colours::lightblue, defaultDisabledColour));
-    dawToolbarDemo.addControl(new PushButton(fontaudio::Ram, Colours::lightblue, defaultDisabledColour));
-    dawToolbarDemo.addControl(new PushButton(fontaudio::Diskio, Colours::lightblue, defaultDisabledColour));
-    dawToolbarDemo.addControl(new PushButton(fontaudio::Loop, Colours::lightblue, defaultDisabledColour));
-    dawToolbarDemo.addControl(new PushButton(fontaudio::Metronome, Colours::lightblue, defaultDisabledColour));
-    dawToolbarDemo.addControl(new PushButton(fontaudio::Keyboard, Colours::lightblue, defaultDisabledColour));
-    dawToolbarDemo.addControl(new PushButton(fontaudio::Waveform, Colours::lightblue, defaultDisabledColour));
-    dawToolbarDemo.addControl(new PushButton(fontaudio::Duplicate, Colours::lightblue, defaultDisabledColour));
-    dawToolbarDemo.addControl(new PushButton(fontaudio::ArrowsHorz, Colours::lightblue, defaultDisabledColour));
-    dawToolbarDemo.addControl(new PushButton(fontaudio::ArrowsVert, Colours::lightblue, defaultDisabledColour));
-    dawToolbarDemo.addControl(new PushButton(fontaudio::PunchIn, Colours::lightblue, defaultDisabledColour));
-    dawToolbarDemo.addControl(new PushButton(fontaudio::PunchOut, Colours::lightblue, defaultDisabledColour));
+    dawToolbarDemo.addControl(new juce::PushButton(fontaudio::Automation2p, Colours::lightblue, defaultDisabledColour));
+    dawToolbarDemo.addControl(new juce::PushButton(fontaudio::Automation3p, Colours::lightblue, defaultDisabledColour));
+    dawToolbarDemo.addControl(new juce::PushButton(fontaudio::Automation4p, Colours::lightblue, defaultDisabledColour));
+    dawToolbarDemo.addControl(new juce::PushButton(fontaudio::Cpu, Colours::lightblue, defaultDisabledColour));
+    dawToolbarDemo.addControl(new juce::PushButton(fontaudio::Ram, Colours::lightblue, defaultDisabledColour));
+    dawToolbarDemo.addControl(new juce::PushButton(fontaudio::Diskio, Colours::lightblue, defaultDisabledColour));
+    dawToolbarDemo.addControl(new juce::PushButton(fontaudio::Loop, Colours::lightblue, defaultDisabledColour));
+    dawToolbarDemo.addControl(new juce::PushButton(fontaudio::Metronome, Colours::lightblue, defaultDisabledColour));
+    dawToolbarDemo.addControl(new juce::PushButton(fontaudio::Keyboard, Colours::lightblue, defaultDisabledColour));
+    dawToolbarDemo.addControl(new juce::PushButton(fontaudio::Waveform, Colours::lightblue, defaultDisabledColour));
+    dawToolbarDemo.addControl(new juce::PushButton(fontaudio::Duplicate, Colours::lightblue, defaultDisabledColour));
+    dawToolbarDemo.addControl(new juce::PushButton(fontaudio::ArrowsHorz, Colours::lightblue, defaultDisabledColour));
+    dawToolbarDemo.addControl(new juce::PushButton(fontaudio::ArrowsVert, Colours::lightblue, defaultDisabledColour));
+    dawToolbarDemo.addControl(new juce::PushButton(fontaudio::PunchIn, Colours::lightblue, defaultDisabledColour));
+    dawToolbarDemo.addControl(new juce::PushButton(fontaudio::PunchOut, Colours::lightblue, defaultDisabledColour));
 
-    dawToolbarDemo.addControl(new PushButton(fontaudio::Cutter, Colours::lightblue, defaultDisabledColour));
-    dawToolbarDemo.addControl(new PushButton(fontaudio::Pen, Colours::lightblue, defaultDisabledColour));
-    dawToolbarDemo2.addControl(new PushButton(fontaudio::Eraser, Colours::lightblue, defaultDisabledColour));
-    dawToolbarDemo2.addControl(new PushButton(fontaudio::Timeselect, Colours::lightblue, defaultDisabledColour));
-    dawToolbarDemo2.addControl(new PushButton(fontaudio::Pointer, Colours::lightblue, defaultDisabledColour));
-    dawToolbarDemo2.addControl(new PushButton(fontaudio::Zoomin, Colours::lightblue, defaultDisabledColour));
-    dawToolbarDemo2.addControl(new PushButton(fontaudio::Zoomout, Colours::lightblue, defaultDisabledColour));
-    dawToolbarDemo2.addControl(new PushButton(fontaudio::Random1dice, Colours::lightblue, defaultDisabledColour));
-    dawToolbarDemo2.addControl(new PushButton(fontaudio::Random2dice, Colours::lightblue, defaultDisabledColour));
-    dawToolbarDemo2.addControl(new PushButton(fontaudio::Scissors, Colours::lightblue, defaultDisabledColour));
-    dawToolbarDemo2.addControl(new PushButton(fontaudio::CaretUp, Colours::lightblue, defaultDisabledColour));
-    dawToolbarDemo2.addControl(new PushButton(fontaudio::CaretDown, Colours::lightblue, defaultDisabledColour));
-    dawToolbarDemo2.addControl(new PushButton(fontaudio::CaretLeft, Colours::lightblue, defaultDisabledColour));
-    dawToolbarDemo2.addControl(new PushButton(fontaudio::CaretRight, Colours::lightblue, defaultDisabledColour));
+    dawToolbarDemo.addControl(new juce::PushButton(fontaudio::Cutter, Colours::lightblue, defaultDisabledColour));
+    dawToolbarDemo.addControl(new juce::PushButton(fontaudio::Pen, Colours::lightblue, defaultDisabledColour));
+    dawToolbarDemo2.addControl(new juce::PushButton(fontaudio::Eraser, Colours::lightblue, defaultDisabledColour));
+    dawToolbarDemo2.addControl(new juce::PushButton(fontaudio::Timeselect, Colours::lightblue, defaultDisabledColour));
+    dawToolbarDemo2.addControl(new juce::PushButton(fontaudio::Pointer, Colours::lightblue, defaultDisabledColour));
+    dawToolbarDemo2.addControl(new juce::PushButton(fontaudio::Zoomin, Colours::lightblue, defaultDisabledColour));
+    dawToolbarDemo2.addControl(new juce::PushButton(fontaudio::Zoomout, Colours::lightblue, defaultDisabledColour));
+    dawToolbarDemo2.addControl(new juce::PushButton(fontaudio::Random1dice, Colours::lightblue, defaultDisabledColour));
+    dawToolbarDemo2.addControl(new juce::PushButton(fontaudio::Random2dice, Colours::lightblue, defaultDisabledColour));
+    dawToolbarDemo2.addControl(new juce::PushButton(fontaudio::Scissors, Colours::lightblue, defaultDisabledColour));
+    dawToolbarDemo2.addControl(new juce::PushButton(fontaudio::CaretUp, Colours::lightblue, defaultDisabledColour));
+    dawToolbarDemo2.addControl(new juce::PushButton(fontaudio::CaretDown, Colours::lightblue, defaultDisabledColour));
+    dawToolbarDemo2.addControl(new juce::PushButton(fontaudio::CaretLeft, Colours::lightblue, defaultDisabledColour));
+    dawToolbarDemo2.addControl(new juce::PushButton(fontaudio::CaretRight, Colours::lightblue, defaultDisabledColour));
 
-    trackControlsDemo.addControl(new PushButton(fontaudio::Armrecording, Colours::lightblue, defaultDisabledColour));
-    trackControlsDemo.addControl(new PushButton(fontaudio::Mute, Colours::lightblue, defaultDisabledColour));
-    trackControlsDemo.addControl(new PushButton(fontaudio::Solo, Colours::lightblue, defaultDisabledColour));
-    trackControlsDemo.addControl(new PushButton(fontaudio::Mono, Colours::lightblue, defaultDisabledColour));
-    trackControlsDemo.addControl(new PushButton(fontaudio::Stereo, Colours::lightblue, defaultDisabledColour));
-    trackControlsDemo.addControl(new PushButton(fontaudio::Phase, Colours::lightblue, defaultDisabledColour));
-    trackControlsDemo.addControl(new PushButton(fontaudio::PresetA, Colours::lightblue, defaultDisabledColour));
-    trackControlsDemo.addControl(new PushButton(fontaudio::PresetB, Colours::lightblue, defaultDisabledColour));
-    trackControlsDemo.addControl(new PushButton(fontaudio::PresetAb, Colours::lightblue, defaultDisabledColour));
-    trackControlsDemo.addControl(new PushButton(fontaudio::PresetBa, Colours::lightblue, defaultDisabledColour));
+    trackControlsDemo.addControl(new juce::PushButton(fontaudio::Armrecording, Colours::lightblue, defaultDisabledColour));
+    trackControlsDemo.addControl(new juce::PushButton(fontaudio::Mute, Colours::lightblue, defaultDisabledColour));
+    trackControlsDemo.addControl(new juce::PushButton(fontaudio::Solo, Colours::lightblue, defaultDisabledColour));
+    trackControlsDemo.addControl(new juce::PushButton(fontaudio::Mono, Colours::lightblue, defaultDisabledColour));
+    trackControlsDemo.addControl(new juce::PushButton(fontaudio::Stereo, Colours::lightblue, defaultDisabledColour));
+    trackControlsDemo.addControl(new juce::PushButton(fontaudio::Phase, Colours::lightblue, defaultDisabledColour));
+    trackControlsDemo.addControl(new juce::PushButton(fontaudio::PresetA, Colours::lightblue, defaultDisabledColour));
+    trackControlsDemo.addControl(new juce::PushButton(fontaudio::PresetB, Colours::lightblue, defaultDisabledColour));
+    trackControlsDemo.addControl(new juce::PushButton(fontaudio::PresetAb, Colours::lightblue, defaultDisabledColour));
+    trackControlsDemo.addControl(new juce::PushButton(fontaudio::PresetBa, Colours::lightblue, defaultDisabledColour));
 
-    distControlsDemo.addControl(new PushButton(fontaudio::Foldback, Colours::lightblue, defaultDisabledColour));
-    distControlsDemo.addControl(new PushButton(fontaudio::Hardclip, Colours::lightblue, defaultDisabledColour));
-    distControlsDemo.addControl(new PushButton(fontaudio::Hardclipcurve, Colours::lightblue, defaultDisabledColour));
-    distControlsDemo.addControl(new PushButton(fontaudio::Softclip, Colours::lightblue, defaultDisabledColour));
-    distControlsDemo.addControl(new PushButton(fontaudio::Softclipcurve, Colours::lightblue, defaultDisabledColour));
-    distControlsDemo.addControl(new PushButton(fontaudio::Speaker, Colours::lightblue, defaultDisabledColour));
-    distControlsDemo.addControl(new PushButton(fontaudio::Headphones, Colours::lightblue, defaultDisabledColour));
-    distControlsDemo.addControl(new PushButton(fontaudio::Bluetooth, Colours::lightblue, defaultDisabledColour));
-    distControlsDemo.addControl(new PushButton(fontaudio::Thunderbolt, Colours::lightblue, defaultDisabledColour));
-    distControlsDemo.addControl(new PushButton(fontaudio::Usb, Colours::lightblue, defaultDisabledColour));
-    distControlsDemo.addControl(new PushButton(fontaudio::Midiplug, Colours::lightblue, defaultDisabledColour));
-    distControlsDemo.addControl(new PushButton(fontaudio::Xlrplug, Colours::lightblue, defaultDisabledColour));
-    distControlsDemo.addControl(new PushButton(fontaudio::Drumpad, Colours::lightblue, defaultDisabledColour));
+    distControlsDemo.addControl(new juce::PushButton(fontaudio::Foldback, Colours::lightblue, defaultDisabledColour));
+    distControlsDemo.addControl(new juce::PushButton(fontaudio::Hardclip, Colours::lightblue, defaultDisabledColour));
+    distControlsDemo.addControl(new juce::PushButton(fontaudio::Hardclipcurve, Colours::lightblue, defaultDisabledColour));
+    distControlsDemo.addControl(new juce::PushButton(fontaudio::Softclip, Colours::lightblue, defaultDisabledColour));
+    distControlsDemo.addControl(new juce::PushButton(fontaudio::Softclipcurve, Colours::lightblue, defaultDisabledColour));
+    distControlsDemo.addControl(new juce::PushButton(fontaudio::Speaker, Colours::lightblue, defaultDisabledColour));
+    distControlsDemo.addControl(new juce::PushButton(fontaudio::Headphones, Colours::lightblue, defaultDisabledColour));
+    distControlsDemo.addControl(new juce::PushButton(fontaudio::Bluetooth, Colours::lightblue, defaultDisabledColour));
+    distControlsDemo.addControl(new juce::PushButton(fontaudio::Thunderbolt, Colours::lightblue, defaultDisabledColour));
+    distControlsDemo.addControl(new juce::PushButton(fontaudio::Usb, Colours::lightblue, defaultDisabledColour));
+    distControlsDemo.addControl(new juce::PushButton(fontaudio::Midiplug, Colours::lightblue, defaultDisabledColour));
+    distControlsDemo.addControl(new juce::PushButton(fontaudio::Xlrplug, Colours::lightblue, defaultDisabledColour));
+    distControlsDemo.addControl(new juce::PushButton(fontaudio::Drumpad, Colours::lightblue, defaultDisabledColour));
 
     digitalClockDemo.addControl(clockPanel);
     setSize(1400, 600);
   }
 
-  void paint(Graphics &g) override
+  void paint(juce::Graphics &g) override
   {
-    g.fillAll(getLookAndFeel().findColour(ResizableWindow::backgroundColourId));
+    g.fillAll(getLookAndFeel().findColour(juce::ResizableWindow::backgroundColourId));
   }
 
   void resized() override
   {
-    Rectangle<float> bounds = getLocalBounds().toFloat();
+    auto bounds = getLocalBounds().toFloat();
     float rowSize = bounds.getHeight() * 0.1f;
     float colSizeOneThird = bounds.getWidth() * 0.33f;
 
-    Rectangle<float> thisRow = bounds.removeFromTop(rowSize);
+    auto thisRow = bounds.removeFromTop(rowSize);
     switchesDemo.setBounds(thisRow.removeFromLeft(colSizeOneThird).toNearestInt());
     combosDemo.setBounds(thisRow.toNearestInt());
 
@@ -251,20 +251,20 @@ struct FontAudioDemo : public Component
     digitalClockDemo.setBounds((thisRow = bounds.removeFromTop(rowSize)).toNearestInt());
   }
 
-  FlexBoxDemoPanel switchesDemo{"switches", FlexBox::Direction::row};
-  FlexBoxDemoPanel combosDemo{"combos", FlexBox::Direction::row};
-  FlexBoxDemoPanel rotarySlidersDemo{"rotary sliders", FlexBox::Direction::row};
-  FlexBoxDemoPanel linearSlidersDemo{"linear sliders", FlexBox::Direction::row};
-  FlexBoxDemoPanel logosDemo{"logos", FlexBox::Direction::row};
-  FlexBoxDemoPanel mediaPlayerDemo{"media player", FlexBox::Direction::row};
-  FlexBoxDemoPanel genericToolbarDemo{"generic tools", FlexBox::Direction::row};
-  FlexBoxDemoPanel dawToolbarDemo{"DAW tools (I)", FlexBox::Direction::row};
-  FlexBoxDemoPanel dawToolbarDemo2{"DAW tools (II)", FlexBox::Direction::row};
-  FlexBoxDemoPanel trackControlsDemo{"Track & Presets", FlexBox::Direction::row};
-  FlexBoxDemoPanel distControlsDemo{"Distortion & Misc.", FlexBox::Direction::row};
-  FlexBoxDemoPanel digitalClockDemo{"Digital clock / Timecode", FlexBox::Direction::row};
+  FlexBoxDemoPanel switchesDemo{"switches", juce::FlexBox::Direction::row};
+  FlexBoxDemoPanel combosDemo{"combos", juce::FlexBox::Direction::row};
+  FlexBoxDemoPanel rotarySlidersDemo{"rotary sliders", juce::FlexBox::Direction::row};
+  FlexBoxDemoPanel linearSlidersDemo{"linear sliders", juce::FlexBox::Direction::row};
+  FlexBoxDemoPanel logosDemo{"logos", juce::FlexBox::Direction::row};
+  FlexBoxDemoPanel mediaPlayerDemo{"media player", juce::FlexBox::Direction::row};
+  FlexBoxDemoPanel genericToolbarDemo{"generic tools", juce::FlexBox::Direction::row};
+  FlexBoxDemoPanel dawToolbarDemo{"DAW tools (I)", juce::FlexBox::Direction::row};
+  FlexBoxDemoPanel dawToolbarDemo2{"DAW tools (II)", juce::FlexBox::Direction::row};
+  FlexBoxDemoPanel trackControlsDemo{"Track & Presets", juce::FlexBox::Direction::row};
+  FlexBoxDemoPanel distControlsDemo{"Distortion & Misc.", juce::FlexBox::Direction::row};
+  FlexBoxDemoPanel digitalClockDemo{"Digital clock / Timecode", juce::FlexBox::Direction::row};
   DigitalClockDemoPanel *clockPanel;
-  SharedResourcePointer<fontaudio::IconHelper> sharedFontAudio;
+  juce::SharedResourcePointer<fontaudio::IconHelper> sharedFontAudio;
 
   JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR(FontAudioDemo)
 };
