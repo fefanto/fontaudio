@@ -54,6 +54,16 @@ fs.writeFileSync(
     os.EOL +
     "\ttypedef juce::String IconName;" +
     os.EOL +
+    os.EOL +
+    "#if __cplusplus >= 202002L" + os.EOL +
+    "\tstatic const char* toCharPtr(const char8_t* utf8Str) {" + os.EOL +
+    "\t\treturn reinterpret_cast<const char*>(utf8Str);" + os.EOL +
+    "\t}" + os.EOL +
+    "#else" + os.EOL +
+    "\tstatic const char* toCharPtr(const char* utf8Str) {" + os.EOL +
+    "\t\treturn utf8Str;" + os.EOL +
+    "\t}" + os.EOL +
+    "#endif" + os.EOL +
     os.EOL
 );
 
@@ -65,9 +75,9 @@ while ((match = regex_icon_description.exec(css))) {
   fileLine =
     "\tconst IconName " +
     camelCaseString(iconName[1]) +
-    ' = IconName::fromUTF8(u8"\\u' +
+    ' = IconName::fromUTF8(toCharPtr(u8"\\u' +
     iconUnicode[1].slice(1) +
-    '");' +
+    '"));' +
     os.EOL;
 
   fs.appendFileSync(iconFilename, fileLine); // TODO: this is probaly superslow - make one big string then append once

@@ -1,5 +1,6 @@
 namespace fontaudio
 {
+  using namespace juce;
   
   IconHelper::IconHelper()
   {
