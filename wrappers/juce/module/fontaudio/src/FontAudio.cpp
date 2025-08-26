@@ -13,20 +13,20 @@ namespace fontaudio
   {
     int scaledSize = int(size * scaleFactor);
     
-    String identifier = juce::String(icon + "@" + String(scaledSize) + "@" + colour.toString());
-    int64 hash = identifier.hashCode64();
-    Image canvas = juce::ImageCache::getFromHashCode(hash);
+    juce::String identifier = juce::String(icon + "@" + juce::String(scaledSize) + "@" + colour.toString());
+    juce::int64 hash = identifier.hashCode64();
+    juce::Image canvas = juce::ImageCache::getFromHashCode(hash);
     if (canvas.isValid())
       return canvas;
     
-    Font FontAudio = getFont((float)scaledSize);
+    juce::Font FontAudio = getFont((float)scaledSize);
     scaledSize = std::max(FontAudio.getStringWidth(icon), scaledSize);
     
-    canvas = Image(Image::PixelFormat::ARGB, scaledSize, scaledSize, true);
-    Graphics g(canvas);
+    canvas = juce::Image(juce::Image::PixelFormat::ARGB, scaledSize, scaledSize, true);
+    juce::Graphics g(canvas);
     g.setColour(colour);
     g.setFont(FontAudio);
-    g.drawText(icon, 0, 0, scaledSize, scaledSize, Justification::centred, true);
+    g.drawText(icon, 0, 0, scaledSize, scaledSize, juce::Justification::centred, true);
     juce::ImageCache::addImageToCache(canvas, hash);
     return canvas;
   }
@@ -34,16 +34,16 @@ namespace fontaudio
   RenderedIcon IconHelper::getRotatedIcon(IconName icon, float size, juce::Colour colour, float iconRotation, float scaleFactor)
   {
     int scaledSize = int(size * scaleFactor);
-    String identifier = String(icon + "@" + String(scaledSize) + "@" + colour.toString() + "@" + String(iconRotation) + "@");
-    int64 hash = identifier.hashCode64();
-    Image canvas = juce::ImageCache::getFromHashCode(hash);
+    juce::String identifier = juce::String(icon + "@" + juce::String(scaledSize) + "@" + colour.toString() + "@" + juce::String(iconRotation) + "@");
+    juce::int64 hash = identifier.hashCode64();
+    juce::Image canvas = juce::ImageCache::getFromHashCode(hash);
     if (canvas.isValid())
       return canvas;
     
     RenderedIcon renderdIcon = getIcon(icon, size, colour, scaleFactor);
-    canvas = Image(Image::PixelFormat::ARGB, renderdIcon.getWidth(), renderdIcon.getHeight(), true);
-    Graphics g(canvas);
-    g.drawImageTransformed(renderdIcon, AffineTransform::rotation(-(float_Pi * iconRotation), renderdIcon.getWidth() * 0.5f, renderdIcon.getHeight() * 0.5f));
+    canvas = juce::Image(juce::Image::PixelFormat::ARGB, renderdIcon.getWidth(), renderdIcon.getHeight(), true);
+    juce::Graphics g(canvas);
+    g.drawImageTransformed(renderdIcon, juce::AffineTransform::rotation(-(juce::float_Pi * iconRotation), renderdIcon.getWidth() * 0.5f, renderdIcon.getHeight() * 0.5f));
     juce::ImageCache::addImageToCache(canvas, hash);
     return canvas;
   }
@@ -60,7 +60,7 @@ namespace fontaudio
                 false);
   }
   
-  void IconHelper::drawCenterdAt(juce::Graphics &g, RenderedIcon icon, Rectangle<int> r, float scaleFactor)
+  void IconHelper::drawCenterdAt(juce::Graphics &g, RenderedIcon icon, juce::Rectangle<int> r, float scaleFactor)
   {
     float iconWidth = icon.getWidth() / scaleFactor;
     float iconHeight = icon.getHeight() / scaleFactor;
@@ -72,7 +72,7 @@ namespace fontaudio
   
   juce::Font IconHelper::getFont()
   {
-    static Font FontAudioFont(FontAudio_ptr);
+    static juce::Font FontAudioFont(FontAudio_ptr);
     return FontAudioFont;
   }
   
